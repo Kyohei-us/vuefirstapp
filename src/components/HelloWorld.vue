@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <Menu itemName="aitemu" />
+    <!-- <Menu itemName="aitemu" /> -->
     <div>{{ msg }}</div>
     <input v-model="message" placeholder="edit me" />
     <p>Message is: {{ message }}</p>
@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import Menu from "./menu.vue";
+// import Menu from "./menu.vue";
 import axios from "axios";
 
 export default {
@@ -67,7 +67,7 @@ export default {
     },
   },
   components: {
-    Menu,
+    // Menu,
   },
   data() {
     return {
@@ -77,26 +77,26 @@ export default {
       songLyricResult: "",
     };
   },
-  mounted() {
-    axios
-      .get(
-        "https://cors-anywhere.herokuapp.com/" +
-          "https://lyricsapiforme.herokuapp.com/?data=" +
-          "adhd",
-        {
-          headers: {
-            "Access-Control-Allow-Origin": "*",
-          },
-        }
-      )
-      .then((response) => {
-        console.log(response);
-        this.todosList = response.data.data;
-      })
-      .catch(function(error) {
-        console.log(error);
-      });
-  },
+  // mounted() {
+  //   axios
+  //     .get(
+  //       "https://cors-anywhere.herokuapp.com/" +
+  //         "https://lyricsapiforme.herokuapp.com/?data=" +
+  //         "adhd",
+  //       {
+  //         headers: {
+  //           "Access-Control-Allow-Origin": "*",
+  //         },
+  //       }
+  //     )
+  //     .then((response) => {
+  //       console.log(response);
+  //       this.todosList = response.data.data;
+  //     })
+  //     .catch(function (error) {
+  //       console.log(error);
+  //     });
+  // },
 };
 </script>
 
