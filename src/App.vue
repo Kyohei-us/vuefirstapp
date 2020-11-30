@@ -5,6 +5,7 @@
     <div class="router_links">
       <router-link to="/">home</router-link>
       <router-link to="/route111">route111</router-link>
+      <router-link to="/foodNutrient">food nutrient</router-link>
     </div>
     <router-view />
   </div>
